@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1B2245">
+  <meta name="description" content="Worker registration portal for skilled operators and general labourers seeking employment through Get Labour Company Limited (GLCL) in Tema, Ghana.">
+  <title>Worker Registration | Get Labour Company Limited</title>
+  <link rel="icon" type="image/png" href="assets/GLCL%20favicon.png">
+  
+  <!-- Google Fonts: Libre Baskerville (Headings) + Lato (Body) + Great Vibes (Credit) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="assets/live-scoped.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="main-content">
+    
+    <!-- Sticky Global Header (Frosted Liquid Glassmorphism) -->
+    <header class="site-header">
+      <div class="wrap nav-wrap">
+        <a class="brand" href="index.html" aria-label="GLCL Home">
+          <img src="assets/GLCL%20official%20logo%20transparent.png" alt="Get Labour Company Limited">
+        </a>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">Menu ☰</button>
+        <nav id="primary-nav" class="nav">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About GLCL</a>
+          <a href="request-labour.html">Request Labour</a>
+          <a class="active" href="register-worker.html">Worker Registration</a>
+          <a href="contact.html">Contact</a>
+          <a class="nav-cta" href="request-labour.html">Request Labour</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="lv">
+    <section class="page-head" aria-labelledby="page-title">
+      <div class="page-head__bg" style="background-image: url('assets/GLCL%20Labourers.jpeg');"></div>
+      <div class="container page-head__inner">
+        <p class="hero__eyebrow">For workers</p>
+        <h1 id="page-title">Non-permanent staff registration.</h1>
+        <p>Fill in the form, generate the PDF, and print two copies: one for you and one to submit at our office. You can also register in person.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container register-layout">
+        <!-- FORM -->
+        <div class="form-shell reveal">
+          <div class="form-shell__head">
+            <h2>Non-Permanent Staff Registration Form</h2>
+            <p>Get Labour Company Limited · Meridian Road, Tema. Fields marked <span style="color: var(--red);">*</span> are required. Typed text is automatically capitalised.</p>
+          </div>
+          <div class="form-shell__body">
+            <form id="registration-form" novalidate onsubmit="return false;">
+              <!-- Section 1 -->
+              <div class="form-section">
+                <div class="form-section__title">
+                  <h3>1. Personal Details</h3>
+                  <span>As printed on your ID documents</span>
+                </div>
+                <div class="field-grid">
+                  <div class="field">
+                    <label for="surname">Surname <span class="req" aria-hidden="true">*</span></label>
+                    <input class="uppercase-input" type="text" id="surname" name="surname" autocomplete="family-name" required aria-describedby="surname-error">
+                    <p class="error" id="surname-error" aria-live="polite"></p>
+                  </div>
+                  <div class="field">
+                    <label for="firstName">First name <span class="req" aria-hidden="true">*</span></label>
+                    <input class="uppercase-input" type="text" id="firstName" name="first_name" autocomplete="given-name" required aria-describedby="firstName-error">
+                    <p class="error" id="firstName-error" aria-live="polite"></p>
+                  </div>
+                  <div class="field">
+                    <label for="otherNames">Other names</label>
+                    <input class="uppercase-input" type="text" id="otherNames" name="other_names" aria-describedby="otherNames-hint otherNames-error">
+                    <p class="hint" id="otherNames-hint">Leave blank if you have no other names.</p>
+                    <p class="error" id="otherNames-error" aria-live="polite"></p>
+                  </div>
+                  <div class="field">
+                    <label for="dateOfBirth">Date of birth <span class="req" aria-hidden="true">*</span></label>
+                    <input type="date" id="dateOfBirth" name="date_of_birth" required aria-describedby="dateOfBirth-hint dateOfBirth-error">
+                    <p class="hint" id="dateOfBirth-hint">Appears on the PDF as DD/MM/YYYY.</p>
+                    <p class="error" id="dateOfBirth-error" aria-live="polite"></p>
+                  </div>
+                  <div class="field">
+                    <label for="gender">Gender <span class="req" aria-hidden="true">*</span></label>
+                    <input class="uppercase-input" type="text" id="gender" name="gender" placeholder="MALE / FEMALE" required aria-describedby="gender-error">
+                    <p class="error" id="gender-error" aria-live="polite"></p>
+                  </div>
+                  <div class="field">
+                    <label for="nationality">Nationality <span class="req" aria-hidden="true">*</span></label>
+                    <input class="uppercase-input" type="text" id="nationality" name="nationality" placeholder="GHANAIAN" required aria-describedby="nationality-error">
+                    <p class="error" id="nationality-error" aria-live="polite"></p>
+                  </div>
+                  <div class="field">
+                    <label for="homeTown">Home town</label>
+                    <input class="uppercase-input" type="text" id="homeTown" name="home_town" aria-describedby="homeTown-error">
+                    <p class="error" id="homeTown-error" aria-live="polite"></p>
+                  </div>
+                  <div class="field">
+                    <label for="profession">Profession</label>
+                    <input class="uppercase-input" type="text" id="profession" name="profession" aria-describedby="profession-hint profession-error">
+                    <p class="hint" id="profession-hint">Skilled applicants: list your trade or operator certification.</p>
+                    <p class="error" id="profession-error" aria-live="polite"></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section 2 -->
+              <div class="form-section">
+                <div class="form-section__title">
+                  <h3>2. Identification &amp; Employment Details</h3>
+                  <span>Staff ID is issued by GLCL</span>
+                </div>
+                <div class="field-grid">
+                  <div class="field">
+                    <label for="phoneNumber">Phone number <span class="req" aria-hidden="true">*</span></label>
+                    <input type="tel" id="phoneNumber" name="phone_number" inputmode="tel" autocomplete="tel" placeholder="024 000 0000" required aria-describedby="phoneNumber-error">
+                    <p class="error" id="phoneNumber-error" aria-live="polite"></p>
+                  </div>
+                  <div class="field">
+                    <label for="staffId">Staff ID</label>
+                    <input class="uppercase-input" type="text" id="staffId" name="staff_id" aria-describedby="staffId-hint staffId-error">
+                    <p class="hint" id="staffId-hint">Leave blank if GLCL has not assigned one.</p>
+                    <p class="error" id="staffId-error" aria-live="polite"></p>
+                  </div>
+                  <div class="field">
+                    <label for="ssnitNumber">SSNIT number</label>
+                    <input class="uppercase-input" type="text" id="ssnitNumber" name="ssnit_number" aria-describedby="ssnitNumber-error">
+                    <p class="error" id="ssnitNumber-error" aria-live="polite"></p>
+                  </div>
+                  <div class="field">
+                    <label for="ghanaCardNo">Ghana Card no.</label>
+                    <input class="uppercase-input" type="text" id="ghanaCardNo" name="ghana_card_no" placeholder="GHA-123456789-0" autocomplete="off" spellcheck="false" aria-describedby="ghanaCardNo-error">
+                    <p class="error" id="ghanaCardNo-error" aria-live="polite"></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section 3 -->
+              <div class="form-section">
+                <div class="form-section__title">
+                  <h3>3. Location &amp; Family Details</h3>
+                </div>
+                <div class="field-grid">
+                  <div class="field field--full">
+                    <label for="residentialAddress">Residential address <span class="req" aria-hidden="true">*</span></label>
+                    <input class="uppercase-input" type="text" id="residentialAddress" name="residential_address" autocomplete="street-address" required aria-describedby="residentialAddress-hint residentialAddress-error">
+                    <p class="hint" id="residentialAddress-hint">House number, area, town.</p>
+                    <p class="error" id="residentialAddress-error" aria-live="polite"></p>
+                  </div>
+                  <div class="field">
+                    <label for="spouseName">Name of spouse</label>
+                    <input class="uppercase-input" type="text" id="spouseName" name="spouse_name" aria-describedby="spouseName-error">
+                    <p class="error" id="spouseName-error" aria-live="polite"></p>
+                  </div>
+                  <div class="field">
+                    <label for="fathersName">Father's name</label>
+                    <input class="uppercase-input" type="text" id="fathersName" name="fathers_name" aria-describedby="fathersName-error">
+                    <p class="error" id="fathersName-error" aria-live="polite"></p>
+                  </div>
+                  <div class="field">
+                    <label for="mothersName">Mother's name</label>
+                    <input class="uppercase-input" type="text" id="mothersName" name="mothers_name" aria-describedby="mothersName-error">
+                    <p class="error" id="mothersName-error" aria-live="polite"></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section 4 -->
+              <div class="form-section">
+                <div class="form-section__title">
+                  <h3>4. Emergency &amp; Contact Details</h3>
+                  <span>Someone GLCL can reach if needed</span>
+                </div>
+                <div class="field-grid">
+                  <div class="field">
+                    <label for="nextOfKin">Next of kin <span class="req" aria-hidden="true">*</span></label>
+                    <input class="uppercase-input" type="text" id="nextOfKin" name="next_of_kin" required aria-describedby="nextOfKin-error">
+                    <p class="error" id="nextOfKin-error" aria-live="polite"></p>
+                  </div>
+                  <div class="field">
+                    <label for="nextOfKinContact">Contact of next of kin <span class="req" aria-hidden="true">*</span></label>
+                    <input type="tel" id="nextOfKinContact" name="next_of_kin_contact" inputmode="tel" required aria-describedby="nextOfKinContact-error">
+                    <p class="error" id="nextOfKinContact-error" aria-live="polite"></p>
+                  </div>
+                  <div class="field">
+                    <label for="emergencyContactPerson">Emergency contact person <span class="req" aria-hidden="true">*</span></label>
+                    <input class="uppercase-input" type="text" id="emergencyContactPerson" name="emergency_contact_person" required aria-describedby="emergencyContactPerson-error">
+                    <p class="error" id="emergencyContactPerson-error" aria-live="polite"></p>
+                  </div>
+                  <div class="field">
+                    <label for="emergencyContactPhone">Phone no. of contact person <span class="req" aria-hidden="true">*</span></label>
+                    <input type="tel" id="emergencyContactPhone" name="emergency_contact_phone" inputmode="tel" required aria-describedby="emergencyContactPhone-error">
+                    <p class="error" id="emergencyContactPhone-error" aria-live="polite"></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section 5 -->
+              <div class="form-section">
+                <div class="form-section__title">
+                  <h3>5. Declaration</h3>
+                  <span>Your name is inserted automatically</span>
+                </div>
+                <div class="declaration-box">
+                  <p style="margin: 0;">
+                    I
+                    <span class="declaration-name" id="declaration-name" aria-live="polite">……………………………</span>
+                    hereby declare that all the information provided above are true and
+                    correct and thus any misinformation should attract the deserved penalty
+                    in full.
+                  </p>
+                  <p style="margin: 1rem 0 0; font-size: 0.85rem; color: var(--muted);">
+                    Signature and date are left blank on purpose — you sign and date the
+                    printed copies by hand.
+                  </p>
+                </div>
+
+                <div class="form-actions">
+                  <button class="btn btn--primary" type="submit" id="generate-btn">Generate PDF</button>
+                  <button class="btn btn--ghost" type="button" id="download-btn" hidden>Download PDF</button>
+                  <button class="btn btn--ghost" type="reset" id="reset-btn">Clear form</button>
+                </div>
+
+                <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+
+                <div class="pdf-preview" id="pdf-preview" hidden>
+                  <iframe id="pdf-frame" title="Preview of the completed staff registration form PDF"></iframe>
+                  <div class="pdf-preview__bar">
+                    <span id="pdf-filename-label"></span>
+                    <a class="btn btn--primary" id="download-link" download href="#">Download PDF</a>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- ASIDE -->
+        <aside class="register-aside reveal" aria-labelledby="aside-title">
+          <div class="aside-card">
+            <h3 id="aside-title">What happens next</h3>
+            <ol>
+              <li>Complete the form and click <strong>Generate PDF</strong>.</li>
+              <li>Check the preview, then <strong>download the PDF</strong>.</li>
+              <li><strong>Print TWO copies</strong> — one for your personal records, one to submit at GLCL's main office on Meridian Road, Tema.</li>
+              <li>Sign and date both printed copies.</li>
+            </ol>
+          </div>
+
+          <div class="aside-card">
+            <h3>Before you register</h3>
+            <ul>
+              <li>Skilled applicants should provide relevant academic records or certificates to support suitable placement.</li>
+              <li>Non-skilled applicants must be physically fit for the work requested.</li>
+              <li>Manual registration at the GLCL office is also possible — call <a href="tel:+233303961288">+233 303 961 288</a> to confirm a time.</li>
+              <li>Registration does not guarantee placement.</li>
+            </ul>
+          </div>
+
+          <div class="aside-card">
+            <h3>The original form</h3>
+            <img src="assets/forms/staff-registration-form.png" alt="Original GLCL Non-Permanent Staff Registration Form, shown for reference" width="498" height="789" loading="lazy">
+            <p style="margin: 0.9rem 0 0; font-size: 0.88rem; color: var(--muted);">
+              The PDF you download matches this paper form — same sections, same borders,
+              same layout.
+            </p>
+          </div>
+
+          <div class="aside-card">
+            <h3>Your information</h3>
+            <p style="margin: 0; font-size: 0.92rem; color: var(--muted);">Everything stays on your device. This page sends and stores nothing.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+<div class="lv lv-footer">
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/GLCL%20official%20logo%20transparent.png" alt="Get Labour Company Limited" width="825" height="302" loading="lazy">
+        <p>Skilled and non-skilled labour for port, cargo-handling and supporting operations. Meridian Road, Tema, Ghana · Est. July 2013.</p>
+        <div class="social-row">
+          <a class="social-link" href="https://wa.me/233303961288" target="_blank" rel="noopener noreferrer" aria-label="Chat with GLCL on WhatsApp"><svg viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88a9.82 9.82 0 0 1 6.99 2.9 9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.81 11.81 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41"/></svg><span class="sr-only-text">WhatsApp</span></a>
+          <a class="social-link" href="https://www.linkedin.com/in/getlabour-2025i" target="_blank" rel="noopener noreferrer" aria-label="GLCL on LinkedIn"><svg viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span class="sr-only-text">LinkedIn</span></a>
+          <a class="social-link" href="https://x.com/glcl62025" target="_blank" rel="noopener noreferrer" aria-label="GLCL on X"><svg viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93zm-1.29 19.5h2.04L6.48 3.24H4.3l13.31 17.41z"/></svg><span class="sr-only-text">X</span></a>
+          <a class="social-link" href="mailto:getlabourcompanylimited@gmail.com" aria-label="Email GLCL"><svg viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.269H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg><span class="sr-only-text">Email</span></a>
+        </div>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul class="footer-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About &amp; team</a></li>
+          <li><a href="request-labour.html">Request Labour</a></li>
+          <li><a href="register-worker.html">Register as Worker</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul class="footer-list">
+          <li><a href="mailto:getlabourcompanylimited@gmail.com">getlabourcompanylimited@gmail.com</a></li>
+          <li><a href="tel:+233303961288">+233 303 961 288</a></li>
+          <li><a href="tel:+233558007876">+233 558 007 876</a></li>
+          <li>Meridian Road, Tema, Ghana</li>
+          <li>Plus Code: JXHR+GF Tema</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-credit">
+      <p class="footer-credit__line">
+        <span>Designed for GLCL by</span>
+        <a class="bans" href="https://wa.me/233244704066?text=Hi%20Bans%20%F0%9F%91%8B%F0%9F%8F%BC%20%2C%20I%20need%20you%20to%20build%20a%20website%20for%20me." target="_blank" rel="noopener noreferrer" aria-label="Message Bans on WhatsApp">Bans</a>
+        <span aria-hidden="true">&amp;</span>
+        <a class="cedi-link" href="https://wa.me/233246905188?text=Hi%20%E2%82%B5edi%20%F0%9F%91%8B%F0%9F%8F%BC%20%2C%20I%20need%20you%20to%20build%20a%20website%20for%20me." target="_blank" rel="noopener noreferrer" aria-label="Message Cedi on WhatsApp">
+          <img src="assets/cedi-credit.png" alt="Cedi" width="288" height="116" loading="lazy">
+        </a>
+      </p>
+      <p class="footer-legal">© <span data-year>2026</span> Get Labour Company Limited · Meridian Road, Tema, Ghana</p>
+    </div>
+  </footer>
+  </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="assets/vendor/jspdf.umd.min.js"></script>
+  <script src="assets/js/pdf.js"></script>
+  <script src="assets/js/register.js"></script>
+  <!-- Functional Back to Top Button (Fixed to bottom-right) -->
+  <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5"/>
+      <path d="m5 12 7-7 7 7"/>
+    </svg>
+  </button>
+
+</body>
+</html>
